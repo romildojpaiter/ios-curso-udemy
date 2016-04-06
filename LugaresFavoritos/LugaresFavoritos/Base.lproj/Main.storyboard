@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="evB-OK-XIy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Map" id="BYZ-38-t0r" customClass="ViewController" customModule="LugaresFavoritos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JMe-r8-dGc">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JMe-r8-dGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4mJ-Rp-eui"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JMe-r8-dGc" secondAttribute="trailing" constant="-20" id="CCW-Fb-xAe"/>
+                            <constraint firstItem="JMe-r8-dGc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IzM-Bb-OnB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JMe-r8-dGc" secondAttribute="bottom" id="rkv-5P-74n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="JMe-r8-dGc" id="PWO-UE-Eua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="356"/>
+        </scene>
+        <!--My Locations-->
+        <scene sceneID="WMe-oR-9yN">
+            <objects>
+                <tableViewController id="h2a-lg-xam" customClass="TableViewController" customModule="LugaresFavoritos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="djd-9x-g8S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FdG-ME-fs9">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FdG-ME-fs9" id="hAT-Vf-Y3P">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="h2a-lg-xam" id="cd5-iD-W8Z"/>
+                            <outlet property="delegate" destination="h2a-lg-xam" id="Lsn-0l-TIW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Locations" id="8W1-99-ZIe">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="f9p-fd-cWu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KdM-kd-71r">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="HvN-XP-ORB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zO-JE-DtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="340"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DtI-Cb-kdE">
+            <objects>
+                <navigationController id="evB-OK-XIy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S0p-Xt-Q4j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h2a-lg-xam" kind="relationship" relationship="rootViewController" id="yvS-fU-C7j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0m-vU-Db5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="332"/>
+        </scene>
+    </scenes>
+</document>
