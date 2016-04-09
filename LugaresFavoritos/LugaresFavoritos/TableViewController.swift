@@ -10,16 +10,28 @@ import UIKit
 
 var places = [Dictionary<String, String>()]
 
+var activePlace = -1;
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Ao se criar um dictinary, ele já vem um item devemos remover esse item 
+        if places.count == 1 {
+            places.removeAtIndex(0)
+            
+            // Adicionando um local de teste.
+            places.append(["name": "Taj Mahal", "lat": "27.1754868012591", "lon": "78.04219077962989"])
+        }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "mapSegue" {
+            activePlace = -1
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,12 +55,29 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = "oi"
+        cell.textLabel?.text = places[indexPath.row]["name"]
         
         return cell
     }
 
-
+    /**
+    * Função responsavel por passar a informação de um linha do tableView selecionada para passar para o 
+    * próximo controller ViewController que esta controlando o mapa.
+    */
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        print("Cliquei na linha \(indexPath.row)")
+        activePlace = indexPath.row
+        return indexPath
+    }
+    
+    /**
+    * Função responsavel por to
+    */
+    override func viewDidAppear(animated: Bool) {
+        print("viewDidAppear: TableViewController")
+        tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

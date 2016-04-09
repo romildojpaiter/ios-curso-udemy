@@ -16,7 +16,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var map: MKMapView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +23,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager = CLLocationManager()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        
+        if activePlace == -1 {
+            // Responsavel por pegar localização inicial
+            manager.requestWhenInUseAuthorization()
+            manager.startUpdatingLocation()
+        } else {
+            let latitude = NSString(string: places[activePlace]["lat"]!).doubleValue
+            let longitude = NSString(string: places[activePlace]["lon"]!).doubleValue
+            
+            self.configRegionOnMap(latitude, longitude: longitude);
+
+        }
         
         // Criando um Gesture Recoginizer para poder adicionar um marcador(PIN)
         // Com ele criamos um reconhecer de gestos
-        let uilgpr = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.action(_:)))
+        let uilgpr = UILongPressGestureRecognizer(target: self,
+                                                  action: #selector(ViewController.actionAddMarcador(_:)))
         uilgpr.minimumPressDuration = 2.0
         
         // Adicionando ao mapa o reconhecedo de movimentos
@@ -37,7 +47,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func action(gestureRecognizer: UIGestureRecognizer) {
+    // Ação chamada quando o botão é Precionado por 2 segundos
+    func actionAddMarcador(gestureRecognizer: UIGestureRecognizer) {
         
         if gestureRecognizer.state == UIGestureRecognizerState.Began {
             let touchPoint = gestureRecognizer.locationInView(self.map)
@@ -70,6 +81,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     }
                 }
                 
+                // Adiciona o local a variavel global
+                places.append(["name": title, "lat": "\(coordinatePoint.latitude)",
+                                              "lon": "\(coordinatePoint.longitude)"])
+                
                 // Criando um marcador
                 let anotation = MKPointAnnotation()
                 anotation.coordinate = coordinatePoint
@@ -90,6 +105,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let latitude = userLocation.coordinate.latitude
         let longitude = userLocation.coordinate.longitude
         
+        self.configRegionOnMap(latitude, longitude: longitude);
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func configRegionOnMap(latitude: Double, longitude: Double) {
+        // Criando uma coordenada
         let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         let latDelta:CLLocationDegrees = 0.01
         let logDelta:CLLocationDegrees = 0.01
@@ -99,15 +125,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let region:MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: span)
         self.map.setRegion(region, animated: true)
         
-        
-        
+        criaAnotation(coordinate);
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func criaAnotation(coordinate: CLLocationCoordinate2D) {
+        // Criando um marcador
+        let anotation = MKPointAnnotation()
+        anotation.coordinate = coordinate
+        anotation.title = title
+        anotation.subtitle = "subtitle"
+        
+        // Adicionando o marcador ao mapa
+        self.map.addAnnotation(anotation);
     }
-
+    
+    
 
 }
-

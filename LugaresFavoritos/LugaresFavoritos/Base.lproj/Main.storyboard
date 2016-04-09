@@ -54,6 +54,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="IMs-iS-dlR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -65,7 +68,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="f9p-fd-cWu"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KdM-kd-71r">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="HvN-XP-ORB"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="mapSegue" id="HvN-XP-ORB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -91,4 +94,7 @@
             <point key="canvasLocation" x="-234" y="332"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HvN-XP-ORB"/>
+    </inferredMetricsTieBreakers>
 </document>
