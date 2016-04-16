@@ -1,0 +1,330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F72ADF451CC2C1F600A57902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72ADF441CC2C1F600A57902 /* AppDelegate.swift */; };
+		F72ADF471CC2C1F600A57902 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72ADF461CC2C1F600A57902 /* ViewController.swift */; };
+		F72ADF4A1CC2C1F600A57902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF481CC2C1F600A57902 /* Main.storyboard */; };
+		F72ADF4C1CC2C1F600A57902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF4B1CC2C1F600A57902 /* Assets.xcassets */; };
+		F72ADF4F1CC2C1F600A57902 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF4D1CC2C1F600A57902 /* LaunchScreen.storyboard */; };
+		F72ADF5D1CC2CDEA00A57902 /* aplito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF581CC2CDEA00A57902 /* aplito.mp3 */; };
+		F72ADF5E1CC2CDEA00A57902 /* engatilha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF591CC2CDEA00A57902 /* engatilha.mp3 */; };
+		F72ADF5F1CC2CDEA00A57902 /* gasping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF5A1CC2CDEA00A57902 /* gasping.mp3 */; };
+		F72ADF601CC2CDEA00A57902 /* snack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF5B1CC2CDEA00A57902 /* snack.mp3 */; };
+		F72ADF611CC2CDEA00A57902 /* trem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F72ADF5C1CC2CDEA00A57902 /* trem.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F72ADF411CC2C1F600A57902 /* HandingShakeSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandingShakeSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72ADF441CC2C1F600A57902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F72ADF461CC2C1F600A57902 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F72ADF491CC2C1F600A57902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F72ADF4B1CC2C1F600A57902 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F72ADF4E1CC2C1F600A57902 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F72ADF501CC2C1F600A57902 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F72ADF561CC2C86500A57902 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		F72ADF581CC2CDEA00A57902 /* aplito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aplito.mp3; sourceTree = "<group>"; };
+		F72ADF591CC2CDEA00A57902 /* engatilha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = engatilha.mp3; sourceTree = "<group>"; };
+		F72ADF5A1CC2CDEA00A57902 /* gasping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gasping.mp3; sourceTree = "<group>"; };
+		F72ADF5B1CC2CDEA00A57902 /* snack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snack.mp3; sourceTree = "<group>"; };
+		F72ADF5C1CC2CDEA00A57902 /* trem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trem.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F72ADF3E1CC2C1F600A57902 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F72ADF381CC2C1F600A57902 = {
+			isa = PBXGroup;
+			children = (
+				F72ADF431CC2C1F600A57902 /* HandingShakeSound */,
+				F72ADF421CC2C1F600A57902 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F72ADF421CC2C1F600A57902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F72ADF411CC2C1F600A57902 /* HandingShakeSound.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F72ADF431CC2C1F600A57902 /* HandingShakeSound */ = {
+			isa = PBXGroup;
+			children = (
+				F72ADF571CC2CDAD00A57902 /* sounds */,
+				F72ADF441CC2C1F600A57902 /* AppDelegate.swift */,
+				F72ADF461CC2C1F600A57902 /* ViewController.swift */,
+				F72ADF561CC2C86500A57902 /* MyPlayground.playground */,
+				F72ADF481CC2C1F600A57902 /* Main.storyboard */,
+				F72ADF4B1CC2C1F600A57902 /* Assets.xcassets */,
+				F72ADF4D1CC2C1F600A57902 /* LaunchScreen.storyboard */,
+				F72ADF501CC2C1F600A57902 /* Info.plist */,
+			);
+			path = HandingShakeSound;
+			sourceTree = "<group>";
+		};
+		F72ADF571CC2CDAD00A57902 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F72ADF581CC2CDEA00A57902 /* aplito.mp3 */,
+				F72ADF591CC2CDEA00A57902 /* engatilha.mp3 */,
+				F72ADF5A1CC2CDEA00A57902 /* gasping.mp3 */,
+				F72ADF5B1CC2CDEA00A57902 /* snack.mp3 */,
+				F72ADF5C1CC2CDEA00A57902 /* trem.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F72ADF401CC2C1F600A57902 /* HandingShakeSound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F72ADF531CC2C1F600A57902 /* Build configuration list for PBXNativeTarget "HandingShakeSound" */;
+			buildPhases = (
+				F72ADF3D1CC2C1F600A57902 /* Sources */,
+				F72ADF3E1CC2C1F600A57902 /* Frameworks */,
+				F72ADF3F1CC2C1F600A57902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandingShakeSound;
+			productName = HandingShakeSound;
+			productReference = F72ADF411CC2C1F600A57902 /* HandingShakeSound.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F72ADF391CC2C1F600A57902 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Paiter App";
+				TargetAttributes = {
+					F72ADF401CC2C1F600A57902 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8A8JHD95U2;
+					};
+				};
+			};
+			buildConfigurationList = F72ADF3C1CC2C1F600A57902 /* Build configuration list for PBXProject "HandingShakeSound" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F72ADF381CC2C1F600A57902;
+			productRefGroup = F72ADF421CC2C1F600A57902 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F72ADF401CC2C1F600A57902 /* HandingShakeSound */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F72ADF3F1CC2C1F600A57902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72ADF4F1CC2C1F600A57902 /* LaunchScreen.storyboard in Resources */,
+				F72ADF5D1CC2CDEA00A57902 /* aplito.mp3 in Resources */,
+				F72ADF4C1CC2C1F600A57902 /* Assets.xcassets in Resources */,
+				F72ADF4A1CC2C1F600A57902 /* Main.storyboard in Resources */,
+				F72ADF5F1CC2CDEA00A57902 /* gasping.mp3 in Resources */,
+				F72ADF601CC2CDEA00A57902 /* snack.mp3 in Resources */,
+				F72ADF611CC2CDEA00A57902 /* trem.mp3 in Resources */,
+				F72ADF5E1CC2CDEA00A57902 /* engatilha.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F72ADF3D1CC2C1F600A57902 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72ADF471CC2C1F600A57902 /* ViewController.swift in Sources */,
+				F72ADF451CC2C1F600A57902 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F72ADF481CC2C1F600A57902 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72ADF491CC2C1F600A57902 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F72ADF4D1CC2C1F600A57902 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F72ADF4E1CC2C1F600A57902 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F72ADF511CC2C1F600A57902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F72ADF521CC2C1F600A57902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F72ADF541CC2C1F600A57902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HandingShakeSound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.paiter.HandingShakeSound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F72ADF551CC2C1F600A57902 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = HandingShakeSound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.paiter.HandingShakeSound;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F72ADF3C1CC2C1F600A57902 /* Build configuration list for PBXProject "HandingShakeSound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72ADF511CC2C1F600A57902 /* Debug */,
+				F72ADF521CC2C1F600A57902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F72ADF531CC2C1F600A57902 /* Build configuration list for PBXNativeTarget "HandingShakeSound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F72ADF541CC2C1F600A57902 /* Debug */,
+				F72ADF551CC2C1F600A57902 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F72ADF391CC2C1F600A57902 /* Project object */;
+}
