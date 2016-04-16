@@ -37,6 +37,13 @@
                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="rQc-x1-zKt"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI6-ct-334">
+                                <rect key="frame" x="64" y="223" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KrF-J7-2qs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

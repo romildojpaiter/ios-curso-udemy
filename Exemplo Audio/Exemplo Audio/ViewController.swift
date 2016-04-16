@@ -13,9 +13,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     var player:AVAudioPlayer = AVAudioPlayer()
+    let audioPath = NSBundle.mainBundle().pathForResource("david", ofType: "mp3")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
+        } catch {
+            
+        }
         
     }
 
@@ -25,16 +32,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func play(sender: AnyObject) {
-        
-        let audioPath = NSBundle.mainBundle().pathForResource("david", ofType: "mp3")!
-        
-        do {
-            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
-            player.play()
-        } catch {
-            
-        }
-        
+        player.play()
     }
 
     @IBAction func pause(sender: AnyObject) {
@@ -44,6 +42,15 @@ class ViewController: UIViewController {
     
     @IBAction func sliderAction(sender: AnyObject) {
         player.volume = slider.value
+    }
+    
+    @IBAction func resetAudio(sender: AnyObject) {
+        do {
+            try player = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
+            player.play()
+        } catch {
+            
+        }
     }
 }
 
