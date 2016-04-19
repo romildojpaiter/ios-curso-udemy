@@ -7,12 +7,47 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Criar um app delegate - Forma de acessar o datamodel
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        // Inserir um usuário no
+//        do {
+//            let newUser = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: context)
+//            newUser.setValue("romildo", forKey: "username")
+//            newUser.setValue("secret", forKey: "password")
+//            try context.save()
+//        } catch {
+//            print("Ocorreu um erro ao salvar o usuário")
+//        }
+        
+        let request = NSFetchRequest(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        
+        request.predicate = NSPredicate(format: "username = %@", "Caio")
+        
+        do {
+            let results = try context.executeFetchRequest(request)
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    print(result.valueForKey("username"))
+                    print(result.valueForKey("password"))
+                }
+                
+            }
+        } catch {
+            print("Ocorreu um erro ao salvar o usuário")
+        }
+
+        
     }
 
     override func didReceiveMemoryWarning() {
