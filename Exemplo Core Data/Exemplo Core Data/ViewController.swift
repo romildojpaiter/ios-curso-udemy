@@ -31,15 +31,27 @@ class ViewController: UIViewController {
         let request = NSFetchRequest(entityName: "User")
         request.returnsObjectsAsFaults = false
         
-        request.predicate = NSPredicate(format: "username = %@", "Caio")
+        // NSPredicate - é utilizado para se fazer uma pesquisa dentro da base 
+        // do core data
+        request.predicate = NSPredicate(format: "username = %@", "romildo")
         
         do {
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
                 
-                for result in results as! [NSManagedObject] {
-                    print(result.valueForKey("username"))
-                    print(result.valueForKey("password"))
+                for result in results {
+                    // print(result.valueForKey("username"))
+                    
+                    // Para objetos que não são criado dirtamente pelo coredata
+                    if let username = result.valueForKey("username"){
+                        print(username)
+                    }
+                    
+                    // Verificano se o conteudo da variavel é nil
+                    if let password = result.password! {
+                        print(password)
+                    }
+                    
                 }
                 
             }
@@ -49,6 +61,8 @@ class ViewController: UIViewController {
 
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
